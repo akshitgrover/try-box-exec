@@ -1,0 +1,22 @@
+{
+  "name": "try-box-exec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshitgrover/try-box-exec.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshitgrover/try-box-exec/issues"
+  },
+  "homepage": "https://github.com/akshitgrover/try-box-exec#readme",
+  "dependencies": {
+    "@types/node": "^12.0.6"
+  }
+}
