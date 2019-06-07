@@ -1,4 +1,4 @@
-build: src/
+build: src/*.ts
 	tsc
 
 clean:
