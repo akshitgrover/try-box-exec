@@ -2,6 +2,7 @@ import * as express from 'express';
 import * as bodyParser from 'body-parser';
 
 import env from './env';
+import controller from './controller'; // Execution route controller
 
 const app: express.Express = express();
 
@@ -10,6 +11,8 @@ const app: express.Express = express();
 */
 app.use(bodyParser.json()); // Parse JSON reqest body
 app.use(bodyParser.urlencoded({ extended: true })); // Parse URL params
+
+app.use('/', controller); // Add execution route middleware
 
 /*
   Set default ENVs
