@@ -2,17 +2,18 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 import { ExecEmitter } from 'box-exec';
+import q from './queue';
 
 const writeFile = (content: string, type: 'T' | 'C' = 'C'): Promise<string> => {
   return new Promise((resolve, reject) => {
     let name = (type == 'T')? 'testcase' : 'code';
+    const filePath: string = path.join(__dirname, `../uploads/${name}`);
     const cb = (err) => {
       if (err) {
         reject(err);
       }
-      resolve(name);
+      resolve(filePath);
     }
-    const filePath: string = path.join(__dirname, `../uploads/${name}`);
     _writeFile(content, filePath, cb);
   });
 };
@@ -42,11 +43,19 @@ const registerEvents = (box: ExecEmitter | null, cb: (err: Error) => void) => {
   /*
     Emited when box has all the inputs and is ready to execute
   */
-  box.on('success', () => {
-    box!.execute();
+  box.on('success', cb);
+  /*
+    Handle any runtime/compilation errors
+  */
+  box.on('error', () => {
+    q.next();
   });
-  box.on('error', () => {}); // Handle any runtime/compilation errors
-  box.on('output', () => {}); // Output after successful execution
+  /*
+    Output after successful execution
+  */
+  box.on('output', () => {
+    q.next();
+  });
 };
 
 export { writeFile, registerEvents };
