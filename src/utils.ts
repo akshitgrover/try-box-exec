@@ -3,15 +3,15 @@ import * as path from 'path';
 
 import { ExecEmitter } from 'box-exec';
 
-const writeFile = (content: string, type: 'T' | 'C' = 'C'): Promise<boolean> => {
+const writeFile = (content: string, type: 'T' | 'C' = 'C'): Promise<string> => {
   return new Promise((resolve, reject) => {
+    let name = (type == 'T')? 'testcase' : 'code';
     const cb = (err) => {
       if (err) {
         reject(err);
       }
-      resolve();
+      resolve(name);
     }
-    let name = (type == 'T')? 'testcase' : 'code';
     const filePath: string = path.join(__dirname, `../uploads/${name}`);
     _writeFile(content, filePath, cb);
   });
