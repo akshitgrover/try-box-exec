@@ -2,7 +2,7 @@ import { ExecEmitter } from 'box-exec';
 
 class Queue<T extends ExecEmitter> {
   private running = 0;
-  private tasks:T[];
+  private tasks:T[] = [];
 
   constructor(readonly limit: number = 1) {};
 
