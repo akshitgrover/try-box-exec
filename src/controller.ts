@@ -25,17 +25,18 @@ router.post('/execute', async (req: Request, res: Response): Promise<void> => {
   let headersSent: boolean = false;
   const cb = (err: Error) => {
     if (!err) {
-      q.push(box);
+      q.push(box!);
       // Render success [WIP]
       return;
     }
     if (!headersSent) {
       headersSent = true;
+      box = null;
       // Render Error [WIP]
       return;
     }
   }
-  const box: BoxExec.ExecEmitter = BoxExec();
+  let box: BoxExec.ExecEmitter | null = BoxExec();
   registerEvents(box, cb);
   box.setData(language, codeFile, [{ file: testCaseFile, timeout: timeOut }]);
 });
