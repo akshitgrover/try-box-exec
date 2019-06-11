@@ -45,15 +45,21 @@ const registerEvents = (box: ExecEmitter | null, cb: (err: Error) => void) => {
   */
   box.on('success', cb);
   /*
+    Emits current stage of queued process
+  */
+  box.on('stage', (val) => { });
+  /*
     Handle any runtime/compilation errors
   */
   box.on('error', () => {
+    box = null;
     q.next();
   });
   /*
     Output after successful execution
   */
   box.on('output', () => {
+    box = null;
     q.next();
   });
 };
