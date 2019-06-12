@@ -39,7 +39,7 @@ router.post('/execute', async (req: Request, res: Response): Promise<void> => {
     }
   }
   let box: BoxExec.ExecEmitter | null = BoxExec();
-  registerEvents(box, cb);
+  registerEvents(box, socketID, cb);
   box.setData(language, codeFile, [{ file: testCaseFile, timeout: timeOut }]);
 });
 
