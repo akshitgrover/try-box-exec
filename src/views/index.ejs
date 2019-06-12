@@ -4,4 +4,13 @@
   socket.on('join', function (id) {
     console.log(id);
   });
+  socket.on('stage', function (s) {
+    console.log(s);
+  });
+  socket.on('output', function (o) {
+    console.log(o);
+  });
+  socket.on('error', function (err) {
+    console.log(err);
+  });
 </script>
