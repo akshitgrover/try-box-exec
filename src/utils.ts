@@ -4,9 +4,9 @@ import * as path from 'path';
 import { ExecEmitter } from 'box-exec';
 import q from './queue';
 
-const writeFile = (content: string, type: 'T' | 'C' = 'C'): Promise<string> => {
+const writeFile = (content: string, uid: string, type: 'T' | 'C' = 'C'): Promise<string> => {
   return new Promise((resolve, reject) => {
-    let name = (type == 'T')? 'testcase' : 'code';
+    let name = uid + '-' + (type == 'T')? 'testcase' : 'code';
     const filePath: string = path.join(__dirname, `../uploads/${name}`);
     const cb = (err) => {
       if (err) {

@@ -12,10 +12,12 @@ router.post('/execute', async (req: Request, res: Response): Promise<void> => {
   let code: string;
   let testCase: string;
   let timeOut: number;
-  ({ language, code, testCase, timeOut} = req.body);
+  let socketID: string;
+  ({ language, code, testCase, timeOut, socketID} = req.body);
   let codeFile: string = '', testCaseFile: string = '';
+  let uid: string = Math.random().toString(16).slice(2);
   try {
-    ([codeFile, testCaseFile] = await Promise.all([ writeFile(code), writeFile(testCase, 'T') ]));
+    ([codeFile, testCaseFile] = await Promise.all([ writeFile(code, uid), writeFile(testCase, uid, 'T') ]));
   } catch (e) {
     if (e) {
       // Render Error [WIP]
