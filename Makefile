@@ -1,5 +1,5 @@
 build: src/*.ts
-	tsc
+	sh build.sh
 
 clean:
 	rm -rf build/
