@@ -1,4 +1,4 @@
-build: src/*.ts
+build: src/**/*
 	sh build.sh
 
 clean:
