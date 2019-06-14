@@ -1,3 +1,29 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<body style="margin:7px">
+  <div class="row">
+    <div class="editor col s12 m12 l6 xl6">
+      <div style="border-bottom: 1px solid; padding-left: 7px; padding-right: 7px;min-height: 2.5rem; max-height:2.5rem">
+        <div style="margin-top:0.2rem; float:left; max-height: inherit; min-height: inherit">Try Box Exec</div>
+        <div style="float:right; max-height: inherit; min-height: inherit">
+          <select class="lang-selector">
+            <option value="C++">C++</option>
+            <option value="C">C</option>
+            <option value="Python 2">Python 2</option>
+            <option value="Python 3">Python 3</option>
+            <option value="Java">Java</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<!--Socket script-->
 <script src='/socket.io/socket.io.js'></script>
 <script>
   var socket = io('/');
