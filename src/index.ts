@@ -30,6 +30,7 @@ app.set('views', path.join(__dirname, './views'));
 app.use(bodyParser.json()); // Parse JSON reqest body
 app.use(bodyParser.urlencoded({ extended: true })); // Parse URL params
 
+app.use(express.static(path.join(__dirname, 'assets'))); // Serve static content
 app.use('/', controller); // Add execution route middleware
 app.use('/', (_, res) => {
   return res.render('index.ejs');
