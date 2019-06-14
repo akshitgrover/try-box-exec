@@ -1,0 +1,57 @@
+.row .editor {
+  padding: 0;
+  min-height: 100%;
+  max-height: 100%;
+  font-size: 1.05rem;
+  border-radius: 0.5rem;
+  border: 1px solid;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.lang-selector {
+  display: inherit;
+  font-size: 1rem;
+  min-height: 2rem;
+  max-height: 2rem;
+  border: 1px solid;
+  margin-top: 0.2rem;
+}
+/*
+  Modile devices
+*/
+@media (max-width: 600px) {
+  .row .editor {
+    min-height: 70%;
+    max-height: 70%;
+    font-size: 1.25rem;
+  }
+}
+
+/*
+  Tablets potrait
+*/
+@media (min-width: 600px) {
+  .row .editor {
+    min-height: 70%;
+    max-height: 70%;
+    font-size: 1.5rem;
+  }
+}
+
+/*
+  Tablets landscape
+*/
+@media (min-width: 769px) {
+  .row .editor {
+    min-height: 100%;
+    max-height: 100%;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .row .editor {
+    font-size: 1.5rem;
+  }
+}
