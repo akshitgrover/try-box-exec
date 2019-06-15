@@ -62,6 +62,15 @@
   outline: 0px solid transparent;
 }
 
+.col2-40 {
+  min-height:40%;
+  max-height:40%;
+  min-width:inherit;
+  max-width:inherit;
+  border-radius:0.5rem;
+  border: 1px solid
+}
+
 /*
   Modile devices
 */
