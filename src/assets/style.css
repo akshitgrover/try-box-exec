@@ -85,6 +85,10 @@
     min-height: calc(70% - 2.7rem);
     max-height: calc(70% - 2.7rem);
   }
+
+  .col2-40 {
+    margin-top: 7px;
+  }
 }
 
 /*
@@ -101,6 +105,10 @@
     min-height: calc(70% - 2.7rem);
     max-height: calc(70% - 2.7rem);
   }
+
+  .col2-40 {
+    margin-top: 7px;
+  }
 }
 
 /*
@@ -116,6 +124,11 @@
   .code-section {
     min-height: calc(100% - 2.7rem);
     max-height: calc(100% - 2.7rem);
+  }
+
+  .col2-40 {
+    margin-top: 0;
+    margin-left: 7px;
   }
 }
 
