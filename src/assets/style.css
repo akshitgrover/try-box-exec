@@ -5,8 +5,6 @@
   font-size: 1.05rem;
   border-radius: 0.5rem;
   border: 1px solid;
-  overflow-y: auto;
-  overflow-x: auto;
 }
 
 .lang-selector {
@@ -17,6 +15,22 @@
   border: 1px solid;
   margin-top: 0.2rem;
 }
+
+.code-section {
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: calc(100% - 2.7rem);
+  max-height: calc(100% - 2.7rem);
+  padding-left: 7px;
+}
+
+.code-section:focus {
+  outline: 0px solid transparent;
+}
+
 /*
   Modile devices
 */
@@ -25,6 +39,11 @@
     min-height: 70%;
     max-height: 70%;
     font-size: 1.25rem;
+  }
+
+  .code-section {
+    min-height: calc(70% - 2.7rem);
+    max-height: calc(70% - 2.7rem);
   }
 }
 
@@ -37,6 +56,11 @@
     max-height: 70%;
     font-size: 1.5rem;
   }
+
+  .code-section {
+    min-height: calc(70% - 2.7rem);
+    max-height: calc(70% - 2.7rem);
+  }
 }
 
 /*
@@ -47,6 +71,11 @@
     min-height: 100%;
     max-height: 100%;
     font-size: 1.5rem;
+  }
+
+  .code-section {
+    min-height: calc(100% - 2.7rem);
+    max-height: calc(100% - 2.7rem);
   }
 }
 
