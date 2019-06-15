@@ -1,3 +1,7 @@
+body {
+  font-size: 1.05rem;
+}
+
 .row .editor {
   padding: 0;
   min-height: 100%;
@@ -78,6 +82,10 @@
   Modile devices
 */
 @media (max-width: 600px) {
+  body {
+    font-size: 1.25rem;
+  }
+
   .row .editor {
     min-height: 70%;
     max-height: 70%;
@@ -98,6 +106,10 @@
   Tablets potrait
 */
 @media (min-width: 600px) {
+  body {
+    font-size: 1.5rem;
+  }
+
   .row .editor {
     min-height: 70%;
     max-height: 70%;
@@ -118,6 +130,10 @@
   Tablets landscape
 */
 @media (min-width: 769px) {
+  body {
+    font-size: 1.5rem;
+  }
+
   .row .editor {
     min-height: 100%;
     max-height: 100%;
