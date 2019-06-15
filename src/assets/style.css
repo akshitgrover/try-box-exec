@@ -77,6 +77,15 @@ body {
   border: 1px solid
 }
 
+.col2-30 {
+  min-height: 30%;
+  max-height: 30%;
+  min-width: inherit;
+  max-width: inherit;
+  border-radius:0.5rem;
+  border: 1px solid;
+}
+
 .run {
   background: rgb(88, 122, 216);
   border-radius: 0.5rem;
@@ -110,6 +119,10 @@ body {
   .col2-40 {
     margin-top: 7px;
   }
+
+  .col2-30 {
+    margin-top: 7px;
+  }
 }
 
 /*
@@ -133,6 +146,10 @@ body {
   .col2-40 {
     margin-top: 7px;
   }
+
+  .col2-30 {
+    margin-top: 7px;
+  }
 }
 
 /*
@@ -154,6 +171,11 @@ body {
   }
 
   .col2-40 {
+    margin-top: 0;
+    margin-left: 7px;
+  }
+
+  .col2-30 {
     margin-top: 0;
     margin-left: 7px;
   }
