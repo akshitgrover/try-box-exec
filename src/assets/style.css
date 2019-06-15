@@ -25,8 +25,8 @@ body {
   white-space: nowrap;
   min-width: inherit;
   max-width: inherit;
-  min-height: calc(100% - 2.7rem);
-  max-height: calc(100% - 2.7rem);
+  min-height: calc(100% - 2.6rem);
+  max-height: calc(100% - 2.6rem);
   padding-left: 7px;
   padding-top: 7px;
   line-height: 1.5rem;
@@ -52,8 +52,8 @@ body {
 }
 
 .test-case-section {
-  min-height: calc(40% - 2.7rem);
-  max-height: calc(40% - 2.7rem);
+  min-height: calc(40% - 2.6rem);
+  max-height: calc(40% - 2.6rem);
   min-width: inherit;
   max-width: inherit;
   line-height: 1.5rem;
@@ -108,8 +108,8 @@ body {
 }
 
 .output-section {
-  min-height: calc(30% - 2.7rem);
-  max-height: calc(30% - 2.7rem);
+  min-height: calc(30% - 2.6rem);
+  max-height: calc(30% - 2.6rem);
   min-width: inherit;
   max-width: inherit;
   overflow-x: auto;
@@ -145,8 +145,8 @@ body {
   }
 
   .code-section {
-    min-height: calc(70% - 2.7rem);
-    max-height: calc(70% - 2.7rem);
+    min-height: calc(70% - 2.6rem);
+    max-height: calc(70% - 2.6rem);
   }
 
   .col2-40 {
@@ -176,8 +176,8 @@ body {
   }
 
   .code-section {
-    min-height: calc(70% - 2.7rem);
-    max-height: calc(70% - 2.7rem);
+    min-height: calc(70% - 2.6rem);
+    max-height: calc(70% - 2.6rem);
   }
 
   .col2-40 {
@@ -207,8 +207,8 @@ body {
   }
 
   .code-section {
-    min-height: calc(100% - 2.7rem);
-    max-height: calc(100% - 2.7rem);
+    min-height: calc(100% - 2.6rem);
+    max-height: calc(100% - 2.6rem);
   }
 
   .col2-40 {
