@@ -33,6 +33,31 @@
   outline: 0px solid transparent;
 }
 
+.heading-container {
+  border-bottom: 1px solid;
+  padding-left: 7px;
+  padding-right: 7px;
+  min-height: 2.5rem;
+  max-height:2.5rem
+}
+
+.heading {
+  margin-top:0.2rem;
+  float:left;
+  max-height: 2.3rem;
+  min-height: 2.3rem
+}
+
+.test-case-section {
+  min-height: calc(40% - 2.7rem);
+  max-height: calc(40% - 2.7rem);
+  min-width: inherit;
+  max-width: inherit;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
 /*
   Modile devices
 */

@@ -8,8 +8,8 @@
     <!--Editor starts here-->
     <div class="editor col s12 m12 l6 xl6">
       <!--Header starts here-->
-      <div style="border-bottom: 1px solid; padding-left: 7px; padding-right: 7px;min-height: 2.5rem; max-height:2.5rem">
-        <div style="margin-top:0.2rem; float:left; max-height: 2.3rem; min-height: 2.3rem">Try Box Exec</div>
+      <div class="heading-container">
+        <div class="heading">Try Box Exec</div>
         <div style="float:right; max-height: inherit; min-height: inherit">
           <select class="lang-selector">
             <option value="C++">C++</option>
@@ -20,12 +20,18 @@
           </select>
         </div>
       </div> <!--Header ends here-->
-      <div class="code-section" contenteditable="true">
-        Hello World
-      </div>
-      </div>
+      <div class="code-section" contenteditable="true"></div>
     </div> <!--Editor ends here-->
-  </div>
+    <!--Second column starts here-->
+    <div class="col s12 m12 l6 xl6" style="padding:0; padding-left: 7px">
+      <div style="min-height:40%; max-height:40%; min-width:inherit; max-width:inherit; border-radius:0.5rem; border: 1px solid">
+        <div class="heading-container">
+          <div class="heading">Test case</div>
+        </div>
+        <div class="test-case-section" contenteditable="true"></div>
+      </div>
+    </div> <!--Second column ends here-->
+  </div> <!--Row ends here-->
 </body>
 
 <!--Editor events script-->
