@@ -53,6 +53,9 @@
   max-height: calc(40% - 2.7rem);
   min-width: inherit;
   max-width: inherit;
+  line-height: 1.5rem;
+  padding-top: 7px;
+  padding-left: 7px;
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: auto;
