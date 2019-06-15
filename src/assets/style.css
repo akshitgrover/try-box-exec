@@ -77,6 +77,18 @@ body {
   border: 1px solid
 }
 
+.run {
+  background: rgb(88, 122, 216);
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  color: white;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+}
+
 /*
   Modile devices
 */
