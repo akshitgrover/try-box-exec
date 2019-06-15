@@ -117,6 +117,20 @@ body {
   white-space: pre;
 }
 
+.status-section {
+  min-height: calc(30% - 14px - 2.6rem);
+  max-height: calc(30% - 14px - 2.6rem);
+  min-width: inherit;
+  max-width: inherit;
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: pre;
+  background: rgb(32, 32, 32);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  color: greenyellow;
+}
+
 /*
   Modile devices
 */
