@@ -25,6 +25,8 @@
   min-height: calc(100% - 2.7rem);
   max-height: calc(100% - 2.7rem);
   padding-left: 7px;
+  padding-top: 7px;
+  line-height: 1.5rem;
 }
 
 .code-section:focus {
