@@ -54,6 +54,16 @@ body {
   border-right: 1px solid;
 }
 
+.heading.label.input {
+  padding-right: 0.5rem;
+  min-width: 3.4rem;
+  text-align: right;
+}
+
+.heading.label.input:focus {
+  outline: 0 solid transparent;
+}
+
 .heading {
   padding-top:0.2rem;
   float:left;
@@ -233,6 +243,10 @@ body {
 
   .col2-rest {
     margin-left: 7px;
+  }
+
+  .heading.label {
+    min-width: 6.1rem;
   }
 }
 
