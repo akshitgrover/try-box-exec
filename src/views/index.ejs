@@ -63,7 +63,13 @@
     console.log(id);
   });
   socket.on('stage', function (s) {
-    console.log(s);
+    var d = new Date();
+    var dd = ('0' + d.getHours()).slice(-2) +
+    ':' + ('0' + d.getMinutes()).slice(-2) + ':' + ('0' + d.getSeconds()).slice(-2) + " | " + s;
+    var textNode = document.createTextNode(dd);
+    var br = document.createElement('br');
+    document.getElementById('status').appendChild(textNode);
+    document.getElementById('status').appendChild(br);
   });
   socket.on('output', function (o) {
     o = o[Object.keys(o)[0]].output;
