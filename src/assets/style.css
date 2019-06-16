@@ -135,6 +135,7 @@ body {
   overflow-x: auto;
   overflow-y: auto;
   white-space: pre;
+  padding-left: 7px;
 }
 
 .status-section {
