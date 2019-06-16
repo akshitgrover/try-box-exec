@@ -8,18 +8,18 @@
     <div class="editor col s12 m12 l6 xl6">
       <!--Header starts here-->
       <div class="heading-container">
-        <div class="heading">Try Box Exec</div>
+        <div class="heading">Code</div>
         <div style="float:right; max-height: inherit; min-height: inherit">
-          <select class="lang-selector">
-            <option value="C++">C++</option>
-            <option value="C">C</option>
-            <option value="Python 2">Python 2</option>
-            <option value="Python 3">Python 3</option>
-            <option value="Java">Java</option>
+          <select id="lang" class="lang-selector">
+            <option value="16">C++</option>
+            <option value="11">C</option>
+            <option value="7">Python 2</option>
+            <option value="9">Python 3</option>
+            <option value="25">Java</option>
           </select>
         </div>
       </div> <!--Header ends here-->
-      <div class="code-section" contenteditable="true"></div>
+      <div id="code" class="code-section" contenteditable="true"></div>
     </div> <!--Editor ends here-->
     <!--Second column starts here-->
     <div class="col s12 m12 l6 xl6" style="padding:0">
@@ -28,10 +28,10 @@
           <div class="heading">Test case</div>
           <div class="heading" style="float:right"><button class="run">Run</button></div>
         </div>
-        <div class="test-case-section" contenteditable="true"></div>
+        <div id="testCase" class="test-case-section" contenteditable="true"></div>
         <div class="heading-container footer-container">
           <div class="heading label">Timeout</div>
-          <div class="heading label input" contenteditable="true" placeholder="2"></div>
+          <div id="timeOut" class="heading label input" contenteditable="true" placeholder="2"></div>
           <div class="heading label" style="padding-left:2px; border:none">seconds</div>
         </div>
       </div> <!--Test case section column ends here-->
@@ -39,13 +39,13 @@
         <div class="heading-container">
           <div class="heading">Output</div>
         </div>
-        <div class="output-section"></div>
+        <div id="output" class="output-section"></div>
       </div> <!--Output section column ends here-->
       <div class="col2-rest">
         <div class="heading-container">
           <div class="heading">Status</div>
         </div>
-        <div class="status-section"></div>
+        <div id="status" class="status-section"></div>
       </div> <!--Status section ends here-->
     </div> <!--Second column ends here-->
   </div> <!--Row ends here-->
