@@ -58,6 +58,8 @@
 <script>
   var socket = io('/');
   socket.on('join', function (id) {
+    window.socketID = id;
+    console.log(socketID);
     console.log(id);
   });
   socket.on('stage', function (s) {
