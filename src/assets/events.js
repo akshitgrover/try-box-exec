@@ -16,6 +16,12 @@ codeSection[0].addEventListener('keydown', function (e) {
   }
 });
 
+function deleteChild(elem) {
+  while (elem.firstChild) {
+    elem.removeChild(elem.firstChild);
+  }
+}
+
 var run = document.getElementsByClassName('run');
 
 run[0].addEventListener('click', function (e) {
@@ -24,6 +30,12 @@ run[0].addEventListener('click', function (e) {
   var lang = document.getElementById('lang');
   var language = lang.options[lang.selectedIndex].value;
   var timeOut = document.getElementById('timeOut').innerText.trim();
+
+  var output = document.getElementById('output');
+  var status = document.getElementById('status');
+  deleteChild(output);
+  deleteChild(status);
+
   code = code.replace(/\u00a0/g, ' ');
 
   var body = {
