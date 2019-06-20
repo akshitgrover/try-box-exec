@@ -11,7 +11,6 @@ let io: SocketIO.Server;
 const writeFile = (content: string, uid: string, type: 'T' | 'C' = 'C'): Promise<string> => {
   return new Promise((resolve, reject) => {
     const name = uid + '-' + ((type == 'T')? 'testcase' : 'code');
-    console.log(name);
     const filePath: string = path.join(__dirname, `../uploads/${name}`);
     const cb = (err) => {
       if (err) {

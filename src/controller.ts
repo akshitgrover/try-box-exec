@@ -20,7 +20,7 @@ router.post('/execute', async (req: Request, res: Response): Promise<void> => {
     ([codeFile, testCaseFile] = await Promise.all([ writeFile(code, uid), writeFile(testCase, uid, 'T') ]));
   } catch (e) {
     if (e) {
-      // Render Error [WIP]
+      res.status(422).send("Error: Unable to process code/testcase file");
       return;
     }
   }
@@ -28,13 +28,13 @@ router.post('/execute', async (req: Request, res: Response): Promise<void> => {
   const cb = (err: Error) => {
     if (!err) {
       q.push(box!);
-      // Render success [WIP]
+      res.status(200).send();
       return;
     }
     if (!headersSent) {
       headersSent = true;
       box = null;
-      // Render Error [WIP]
+      res.status(422).send(`Error: ${err.message}`);
       return;
     }
   }
