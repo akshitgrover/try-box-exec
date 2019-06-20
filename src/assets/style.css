@@ -35,6 +35,7 @@ body {
   padding-left: 7px;
   padding-top: 7px;
   line-height: 1.5rem;
+  background-color: #ffffff;
 }
 
 .code-section:focus {
@@ -69,7 +70,9 @@ body {
   padding-right: 0.5rem;
   min-width: 3.4rem;
   text-align: right;
-  box-shadow: inset 0px 0px 2px grey;
+  background: #ffffff;
+  color: black;
+  box-shadow: inset 0px 0px 5px grey;
 }
 
 .heading.label.input:focus {
@@ -94,6 +97,7 @@ body {
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: auto;
+  background: #ffffff;
 }
 
 .test-case-section:focus {
@@ -127,20 +131,29 @@ body {
   box-shadow: 2px 2px 7px grey;
 }
 
-.col2-rest .heading-container {
+/* .col2-rest .heading-container {
   box-shadow: 0px 2px 7px #9a9a9a;
-}
+} */
 
 .run {
-  background: rgb(88, 122, 216);
+  background: #597fe7;
+  border: 0px;
   border-radius: 0.5rem;
-  border: 1px solid white;
+  box-shadow: 1px 1px 5px white;
   color: white;
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   padding-right: 1rem;
   padding-left: 1rem;
   font-size: 1.3rem;
+}
+
+.run:focus {
+  background: #597fe7;
+}
+
+.run:active {
+  box-shadow: 0px 0px 0px transparent;
 }
 
 .output-section {
