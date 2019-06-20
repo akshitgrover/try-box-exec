@@ -36,7 +36,7 @@
         </div>
       </div> <!--Test case section column ends here-->
       <div class="col2-30">
-        <div class="heading-container" style="background-color:#009999; color:white">
+        <div id="output-h" class="heading-container" style="background-color:#009999; color:white">
           <div class="heading">Output</div>
         </div>
         <div id="output" class="output-section"></div>
@@ -75,11 +75,14 @@
     o = o[Object.keys(o)[0]].output;
     o = o.replace(/ /g, '\u00a0');
     o = o.replace(/\t/g, '\u00a0\u00a0\u00a0\u00a0');
+    document.getElementById('output-h').style.backgroundColor = "#4CAF50";
     document.getElementById('output').innerHTML = o;
   });
   socket.on('error', function (err) {
     err = err.replace(/ /g, '\u00a0');
     err = err.replace(/\t/g, '\u00a0\u00a0\u00a0\u00a0');
+    document.getElementById('output-h').style.backgroundColor = "#CB4335";
+    document.getElementById('output').style.color = "#CB4335";
     document.getElementById('output').innerHTML = err;
   });
 </script>

@@ -34,7 +34,24 @@ run[0].addEventListener('click', function (e) {
   var output = document.getElementById('output');
   var status = document.getElementById('status');
   deleteChild(output);
+  document.getElementById('output-h').style.backgroundColor = "#009999";
+  output.style.color = "black";
   deleteChild(status);
+  if (code == "") {
+    var textNode = document.createTextNode("Error: Code block is empty");
+    document.getElementById('output-h').style.backgroundColor = "#CB4335";
+    output.style.color = "#CB4335"
+    output.appendChild(textNode);
+    return;
+  }
+
+  if (timeOut == "") {
+    var textNode = document.createTextNode("Error: TimeOut is required");
+    document.getElementById('output-h').style.backgroundColor = "#CB4335";
+    output.style.color = "#CB4335"
+    output.appendChild(textNode);
+    return;
+  }
 
   code = code.replace(/\u00a0/g, ' ');
 
@@ -50,6 +67,10 @@ run[0].addEventListener('click', function (e) {
   req.setRequestHeader('Content-Type', 'application/json');
   req.send(JSON.stringify(body));
   req.onreadystatechange = function () {
-    console.log(req.readyState);
+    if (req.readyState == 4 && req.status != 200) {
+      var textNode = document.createTextNode(req.responseText);
+      output.style.color = "red";
+      output.appendChild(textNode);
+    }
   }
 });
