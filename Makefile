@@ -1,4 +1,4 @@
-build: src/**/*
+build: src/* src/**/*
 	sh build.sh
 
 clean:
