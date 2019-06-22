@@ -1,11 +1,25 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/icons.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <body style="margin:7px">
+  <div class="row" style="margin-bottom:7px;margin-bottom:2.5rem">
+    <div class="col s12 m12 l12 xl12 banner">
+        <div class="heading" style="max-width:100%; min-width:100%; color: #CB4335"><b>box-exec</b></div>
+        <div style="margin-bottom: 2.5rem; font-size:2rem; max-width:100%; min-width:100%; color: #2471A3"><b>Container orchestrator for compilation and execution</b></div>
+        <div class="highlight">npm i --save box-exec</div>
+        <div style="display:block">
+          <a class="waves-effect waves-light btn social dropbox" href="#editor" style="margin-bottom:1.5rem; text-align:center; padding-left: 2rem">Try box-exec</a>
+          <a class="waves-effect waves-light btn social github" style="margin-bottom: 1.5rem;" href="https://github.com/akshitgrover/box-exec">
+          <i class="fa fa-github"></i>Github</a>
+        </div>
+    </div>
+  </div>
   <div class="row">
     <!--Editor starts here-->
-    <div class="editor col s12 m12 l6 xl6">
+    <div id="editor" class="editor col s12 m12 l6 xl6">
       <!--Header starts here-->
       <div class="heading-container" style="color:white; background-color: #597fe7">
         <div class="heading">Code</div>
